@@ -8,7 +8,9 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
         // Enable source maps for easier debugging
-        sourceMapFilename: '[file].map'
+        // This setting should be split to avoid confusion
+        sourceMapFilename: '[file].map', // Deprecated, use devtool instead
+        devtool: 'source-map' // Recommended to enable source maps
     },
     module: {
         rules: [{

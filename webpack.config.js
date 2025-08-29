@@ -6,7 +6,9 @@ module.exports = {
     output: {
         // Output directory and filename for the bundled code
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        // Enable source maps for easier debugging
+        sourceMapFilename: '[file].map'
     },
     module: {
         rules: [{

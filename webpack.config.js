@@ -23,8 +23,10 @@ module.exports = {
         }]
     },
     devServer: {
-        // Serve static files from the dist directory
-        static: path.join(__dirname, 'dist'),
+        // Serve static files from the output directory
+        static: {
+            directory: path.resolve(__dirname, 'dist')
+        },
         // Enable compression for files served
         compress: true,
         // Port number for the development server
